@@ -18,7 +18,7 @@
 Install it by executing:
 
 ```shell
-npm i -D "@igor.dvlpr/strip-html"
+npm i "@igor.dvlpr/strip-html"
 ```
 
 <br>
