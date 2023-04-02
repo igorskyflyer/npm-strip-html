@@ -1,7 +1,7 @@
 {
-	"name": "@igor.dvlpr/$1",
+	"name": "@igor.dvlpr/strip-html",
 	"version": "1.0.0",
-	"description": "$2",
+	"description": "🥞 Removes HTML code from the given string. Can even extract text-only from the given an HTML string. ✨",
 	"sideEffects": false,
 	"engines": {
 		"node": ">=16.0"
@@ -18,20 +18,28 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/igorskyflyer/$3.git"
+		"url": "git+https://github.com/igorskyflyer/npm-strip-html.git"
 	},
 	"keywords": [
 		"igorskyflyer",
 		"igor.dvlpr",
-		$4
+		"html",
+		"strip",
+		"remove",
+		"text",
+		"string",
+		"text-node",
+		"node",
+		"nodes",
+		"element"
 	],
 	"author": "Igor Dimitrijević <admin@igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
 	"license": "MIT",
 	"funding": "https://ko-fi.com/igorskyflyer",
 	"bugs": {
-		"url": "https://github.com/igorskyflyer/$3/issues"
+		"url": "https://github.com/igorskyflyer/npm-strip-html/issues"
 	},
-	"homepage": "https://github.com/igorskyflyer/$3#readme",
+	"homepage": "https://github.com/igorskyflyer/npm-strip-html#readme",
 	"devDependencies": {
 		"@types/chai": "^4.3.1",
 		"@types/mocha": "^9.1.1",
