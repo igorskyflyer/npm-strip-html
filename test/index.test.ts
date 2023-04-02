@@ -1,6 +1,6 @@
 import { assert as chai } from 'chai'
 
-describe('🧪 $1 tests 🧪', () => {
+describe('🧪 strip-html tests 🧪', () => {
   it('#1 should return ', () => {
     //
   })
