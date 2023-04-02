@@ -1,5 +1,6 @@
-# $1
-$2
+# strip-html
+
+🥞 Removes HTML code from the given string. Can even extract text-only from the given an HTML string. ✨
 
 <br>
 
@@ -17,7 +18,7 @@ $2
 Install it by executing:
 
 ```shell
-npm i -D "@igor.dvlpr/$1"
+npm i -D "@igor.dvlpr/strip-html"
 ```
 
 <br>
