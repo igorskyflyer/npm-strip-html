@@ -1,22 +1,27 @@
 import { assert as chai } from 'chai'
-
-import { stripHtml, stripHtmlCode } from '../src/index'
 import { readFileSync } from 'fs'
+import { stripHtml, stripHtmlCode } from '../src/index'
 
 const code: string = '<h3>igorskyflyer</h3>'
 const testCount: number = 6
 
-let file: Buffer
-let html: string
+let htmlFile: Buffer
+let strippedFile: Buffer
+let htmlString: string
+let strippedString: string
 let hasFile: boolean = false
 let testRun: number = 0
 
 try {
-  file = readFileSync('./test/data/test.html')
-  html = file.toString()
+  htmlFile = readFileSync('./test/data/test.html')
+  htmlString = htmlFile.toString()
+
+  strippedFile = readFileSync('./test/data/stripped.txt')
+  strippedString = strippedFile.toString()
+
   hasFile = true
 } catch {
-  console.warn('The test file is not available, running only small sample tests.')
+  console.warn('The test files are not available, running only small sample tests.')
 }
 
 describe('🧪 strip-html tests 🧪', () => {
@@ -42,12 +47,12 @@ describe('🧪 strip-html tests 🧪', () => {
 
   if (hasFile) {
     it('#5 should return "" ', () => {
-      chai.equal(stripHtml(html), '')
+      chai.equal(stripHtml(htmlString), '')
       testRun++
     })
 
     it('#6 should return 0 ', () => {
-      chai.equal(stripHtmlCode(code), 'igorskyflyer')
+      chai.equal(stripHtmlCode(htmlString), strippedString)
       testRun++
     })
   }
