@@ -1,7 +1,7 @@
 // @igorskyflyer
 
 /**
- * Strips HTML tags completely.
+ * Strips only the HTML code while keeping the text content.
  * @param html the HTML string to process
  * @returns the processed string
  */
@@ -10,8 +10,8 @@ export function stripHtmlCode(html: string): string {
 }
 
 /**
- * Strips only the HTML code while keeping the text content.
- *  @param html the HTML string to process
+ * Strips HTML tags completely.
+ * @param html the HTML string to process
  * @returns the processed string
  */
 export function stripHtml(html: string): string {
