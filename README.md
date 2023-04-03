@@ -24,3 +24,27 @@ npm i "@igor.dvlpr/strip-html"
 <br>
 
 ## 🤹🏼‍♂️ API
+
+<br>
+
+```ts
+function stripHtml(html: string): string
+```
+
+_Strips HTML tags completely._
+
+`html: string` - the HTML string to process.
+
+`returns` - the processed string.
+
+<br>
+
+```ts
+function stripHtmlCode(html: string): string
+```
+
+_Strips only the HTML code while keeping the heading text._
+
+`html: string` - the HTML string to process.
+
+`returns` - the processed string.
