@@ -43,7 +43,7 @@ _Strips HTML tags completely._
 function stripHtmlCode(html: string): string
 ```
 
-_Strips only the HTML code while keeping the heading text._
+_Strips only the HTML code while keeping the text content._
 
 `html: string` - the HTML string to process.
 
