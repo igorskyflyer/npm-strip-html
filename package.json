@@ -1,6 +1,6 @@
 {
 	"name": "@igor.dvlpr/strip-html",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "🥞 Removes HTML code from the given string. Can even extract text-only from the given an HTML string. ✨",
 	"sideEffects": false,
 	"engines": {
