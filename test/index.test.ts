@@ -62,7 +62,7 @@ describe('🧪 strip-html tests 🧪', () => {
     })
 
     it('#7 should return 0 ', () => {
-      chai.equal(stripHtmlCode(partialString), 'orem ipsum igorskyflyer')
+      chai.equal(stripHtmlCode(partialString), 'Lorem ipsum igorskyflyer')
       testRun++
     })
   }
