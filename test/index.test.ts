@@ -40,7 +40,7 @@ describe('🧪 strip-html tests 🧪', () => {
     testRun++
   })
 
-  it('#3 should return "" ', () => {
+  it('#3 should return ""', () => {
     chai.equal(stripHtml(code), '')
     testRun++
   })
@@ -56,12 +56,12 @@ describe('🧪 strip-html tests 🧪', () => {
       testRun++
     })
 
-    it('#6 should return 0 ', () => {
+    it('#6 should return the stripped string ', () => {
       chai.equal(stripHtmlCode(htmlString), strippedString)
       testRun++
     })
 
-    it('#7 should return 0 ', () => {
+    it('#7 should return "Lorem ipsum igorskyflyer"', () => {
       chai.equal(stripHtmlCode(partialString), 'Lorem ipsum igorskyflyer')
       testRun++
     })
