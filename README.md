@@ -40,8 +40,8 @@
 
 - [Usage](#-usage)
 - [API](#-api)
-  - [stripHtmlCode](#striphtmlcodehtml-string-string)
   - [stripHtml](#striphtmlhtml-string-string)
+  - [stripHtmlCode](#striphtmlcodehtml-string-string)
 - [Examples](#-examples)
 - [Changelog](#-changelog)
 - [License](#-license)
