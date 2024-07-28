@@ -91,7 +91,8 @@ Returns the processed string.
 import { stripHtmlCode } from '@igor.dvlpr/strip-html'
 
 console.log(
-  stripHtmlCode(`<div class="container">
+  stripHtmlCode(`
+  <div class="container">
     <h1>Title</h1>
     <p>This is a <strong>paragraph</strong> with some <em>emphasis</em> and a <a href="#">link</a>.</p>
     <ul>
@@ -99,8 +100,8 @@ console.log(
         <li>Item 2</li>
         <li>Item 3</li>
     </ul>
-</div>`)
-)
+</div>
+`))
 
 // Will print
 
