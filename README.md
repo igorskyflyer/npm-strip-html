@@ -72,7 +72,7 @@ npm i '@igor.dvlpr/strip-html'
 
 Returns the processed string.
 
-<br>
+---
 
 ### `stripHtmlCode(html: string): string`
 
