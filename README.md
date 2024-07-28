@@ -86,7 +86,7 @@ Returns the processed string.
 
 ## ✨ Examples
 
-`.ts`
+`example.ts`
 ```ts
 import {  } from '@igor.dvlpr/strip-html'
 
