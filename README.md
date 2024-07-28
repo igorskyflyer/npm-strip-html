@@ -1,50 +1,136 @@
-# strip-html
-
-🥞 Removes HTML code from the given string. Can even extract text-only from the given an HTML string. ✨
+<h1 align="center">Strip &lt;html&gt;</h1>
 
 <br>
 
 <div align="center">
-<h3>💖 Support further development</h3>
-<a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="108"></a>
+  🥞 Removes HTML code from the given string. Can even extract text-only from the given an HTML string. ✨
 </div>
 
 <br>
 <br>
+
+<div align="center">
+  <blockquote>
+    <br>
+    <h4>💖 Support further development</h4>
+    <span>I work hard for every project, including this one
+    <br>
+    and your support means a lot to me!
+    <br>
+    <br>
+    Consider buying me a coffee. ☕
+    <br>
+    <strong>Thank you for supporting my efforts! 🙏😊</strong></span>
+    <br>
+    <br>
+    <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="150"></a>
+    <br>
+    <br>
+    <a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>
+    <br>
+    <br>
+    <br>
+  </blockquote>
+</div>
+
+<br>
 <br>
 
-## 🕵🏼‍♂️ Usage
+## 📃 Table of contents
+
+- [Usage](#-usage)
+- [API](#-api)
+  - [stripHtmlCode](#striphtmlcodehtml-string-string)
+  - [stripHtml](#striphtmlhtml-string-string)
+- [Examples](#-examples)
+- [Changelog](#-changelog)
+- [License](#-license)
+- [Related](#-related)
+- [Author](#-author)
+
+<br>
+<br>
+
+## 🕵🏼 Usage
 
 Install it by executing:
 
 ```shell
-npm i "@igor.dvlpr/strip-html"
+npm i '@igor.dvlpr/strip-html'
 ```
 
 <br>
 
-## 🤹🏼‍♂️ API
+## 🤹🏼 API
+
+
+### `stripHtml(html: string): string`
+
+*Strips HTML tags completely.*  
+
+`html` - The HTML string to process.  
+
+Returns the processed string.
 
 <br>
 
+### `stripHtmlCode(html: string): string`
+
+*Strips only the HTML code while keeping the text content.*  
+
+`html` - The HTML string to process.  
+
+Returns the processed string.
+
+---
+
+## ✨ Examples
+
+`.ts`
 ```ts
-function stripHtml(html: string): string
+import {  } from '@igor.dvlpr/strip-html'
+
 ```
 
-_Strips HTML tags completely._
+---
 
-`html: string` - the HTML string to process.
+## 📝 Changelog
 
-`returns` - the processed string.
+📑 The changelog is available here: [CHANGELOG.md](https://github.com/igorskyflyer/npm-strip-html/blob/main/CHANGELOG.md).
+
+---
+
+## 🪪 License
+
+Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/npm-strip-html/blob/main/LICENSE).
+
+---
+
+## 🧬 Related
+
+[]()
+
+> __
+
+[]()
+
+> __
+
+[]()
+
+> __
+
+[]()
+
+> __
+
+[]()
+
+> __
+
+---
 
 <br>
 
-```ts
-function stripHtmlCode(html: string): string
-```
-
-_Strips only the HTML code while keeping the text content._
-
-`html: string` - the HTML string to process.
-
-`returns` - the processed string.
+### 👨🏻‍💻 Author
+Created by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
