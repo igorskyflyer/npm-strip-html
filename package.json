@@ -1,52 +1,50 @@
 {
-	"name": "@igor.dvlpr/strip-html",
-	"version": "1.0.1",
-	"description": "🥞 Removes HTML code from the given string. Can even extract text-only from the given an HTML string. ✨",
-	"sideEffects": false,
-	"engines": {
-		"node": ">=16.0"
-	},
-	"types": "./dist/index.d.ts",
-	"main": "./dist/index.js",
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"build": "tsc",
-		"test": "ts-mocha test/*.ts",
-		"pub": "npm test && npm run build && npm publish --access public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/igorskyflyer/npm-strip-html.git"
-	},
-	"keywords": [
-		"igorskyflyer",
-		"igor.dvlpr",
-		"html",
-		"strip",
-		"remove",
-		"text",
-		"string",
-		"text-node",
-		"node",
-		"nodes",
-		"element"
-	],
-	"author": "Igor Dimitrijević <igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
-	"license": "MIT",
-	"funding": "https://ko-fi.com/igorskyflyer",
-	"bugs": {
-		"url": "https://github.com/igorskyflyer/npm-strip-html/issues"
-	},
-	"homepage": "https://github.com/igorskyflyer/npm-strip-html#readme",
-	"devDependencies": {
-		"@types/chai": "^4.3.1",
-		"@types/mocha": "^9.1.1",
-		"@types/node": "^12.17.0",
-		"chai": "^4.3.6",
-		"mocha": "^10.0.0",
-		"ts-mocha": "^10.0.0",
-		"typescript": "^4.7.4"
-	}
+    "name": "@igor.dvlpr/strip-html",
+    "version": "2.0.0",
+    "description": "🥞 Removes HTML code from the given string. Can even extract text-only from the given an HTML string. ✨",
+    "sideEffects": false,
+    "engines": {
+        "node": ">=20.0"
+    },
+    "types": "./dist/index.d.mts",
+    "main": "./dist/index.mjs",
+    "module": "./dist/index.mjs",
+    "files": ["./dist"],
+    "scripts": {
+        "build": "tsc",
+        "test": "vitest --run",
+        "debug": "vitest",
+        "pub": "npm test && npm run build && npm publish --access public"
+    },
+    "keywords": [
+        "html",
+        "strip",
+        "remove",
+        "text",
+        "string",
+        "text-node",
+        "node",
+        "nodes",
+        "element",
+        "igorskyflyer",
+        "igor.dvlpr"
+    ],
+    "license": "MIT",
+    "author": "Igor Dimitrijević <igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
+    "funding": "https://ko-fi.com/igorskyflyer",
+    "homepage": "https://github.com/igorskyflyer/npm-strip-html",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/igorskyflyer/npm-strip-html.git"
+    },
+    "bugs": {
+        "url": "https://github.com/igorskyflyer/npm-strip-html/issues"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1.8.3",
+        "@igor.dvlpr/biome-config-igorskyflyer": "^1.0.0",
+        "@types/node": "^20.14.13",
+        "typescript": "^5.5.4",
+        "vitest": "^2.0.4"
+    }
 }
