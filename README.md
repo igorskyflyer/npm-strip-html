@@ -88,8 +88,50 @@ Returns the processed string.
 
 `example.ts`
 ```ts
-import {  } from '@igor.dvlpr/strip-html'
+import { stripHtmlCode } from '@igor.dvlpr/strip-html'
 
+console.log(
+  stripHtmlCode(`<div class="container">
+    <h1>Title</h1>
+    <p>This is a <strong>paragraph</strong> with some <em>emphasis</em> and a <a href="#">link</a>.</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <div>
+        <span style="color: red;">Nested span</span> with <code>inline code</code>.
+    </div>
+    <img src="image.jpg" alt="Image description">
+    <script>
+        console.log('This is a script tag');
+    </script>
+    <style>
+        .container { font-family: Arial, sans-serif; }
+    </style>
+</div>`)
+)
+
+// Will print
+
+/*
+Title
+    This is a paragraph with some emphasis and a link.
+
+        Item 1
+        Item 2
+        Item 3
+
+
+        Nested span with inline code.
+
+
+
+        console.log('This is a script tag');
+
+
+        .container { font-family: Arial, sans-serif; }
+*/
 ```
 
 ---
