@@ -99,16 +99,6 @@ console.log(
         <li>Item 2</li>
         <li>Item 3</li>
     </ul>
-    <div>
-        <span style="color: red;">Nested span</span> with <code>inline code</code>.
-    </div>
-    <img src="image.jpg" alt="Image description">
-    <script>
-        console.log('This is a script tag');
-    </script>
-    <style>
-        .container { font-family: Arial, sans-serif; }
-    </style>
 </div>`)
 )
 
@@ -121,16 +111,6 @@ Title
         Item 1
         Item 2
         Item 3
-
-
-        Nested span with inline code.
-
-
-
-        console.log('This is a script tag');
-
-
-        .container { font-family: Arial, sans-serif; }
 */
 ```
 
