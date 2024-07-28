@@ -108,25 +108,33 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 ## 🧬 Related
 
-[]()
+[@igor.dvlpr/duoscribi](https://www.npmjs.com/package/@igor.dvlpr/duoscribi)
 
-> __
+> _✒ DúöScríbî allows you to convert letters with diacritics to regular letters. 🤓_
 
-[]()
+<br>
 
-> __
+[@igor.dvlpr/magic-queryselector](https://www.npmjs.com/package/@igor.dvlpr/magic-queryselector)
 
-[]()
+> _🪄 A TypeScript-types patch for querySelector/querySelectorAll, make them return types you expect them to! 🔮_
 
-> __
+<br>
 
-[]()
+[@igor.dvlpr/astro-escaped-component](https://www.npmjs.com/package/@igor.dvlpr/astro-escaped-component)
 
-> __
+> _🏃🏻‍♂️‍➡️ An Astro component that holds only HTML-encoded content. 📜_
 
-[]()
+<br>
 
-> __
+[@igor.dvlpr/str-is-in](https://www.npmjs.com/package/@igor.dvlpr/str-is-in)
+
+> _🧵 Provides ways of checking whether a String is present in an Array of Strings using custom Comparators. 🔍_
+
+<br>
+
+[@igor.dvlpr/strip-html-headings](https://www.npmjs.com/package/@igor.dvlpr/strip-html-headings)
+
+> _🍛 Strips HTML headings! 🍤_
 
 ---
 
