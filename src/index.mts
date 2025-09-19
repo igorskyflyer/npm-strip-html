@@ -1,7 +1,7 @@
 // Author: Igor Dimitrijević (@igorskyflyer)
 
-const rxHtmlCode: RegExp = /<[^>]+>([^<]+)?/gm
-const rxHtml: RegExp = /<[^>]+>(?:[^<]+)?/gm
+const rxHtmlCode: RegExp = /<[^>]+>|([^<]+)/gm
+const rxHtml: RegExp = /<[^>]+>|[^<]+/gm
 
 /**
  * Strips only the HTML code while keeping the text content.
