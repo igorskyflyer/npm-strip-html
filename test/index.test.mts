@@ -4,29 +4,29 @@ import { readFileSync } from 'node:fs'
 import { assert, describe, test } from 'vitest'
 import { stripHtml, stripHtmlCode } from '../src/index.mts'
 
-const code: string = '<h3>igorskyflyer</h3>'
+const code: string = '<hr><h3>igorskyflyer</h3><br>'
 
-let htmlFile: Buffer
-let strippedFile: Buffer
-let partialFile: Buffer
 let htmlString: string
-let strippedString: string
+let strippedStringWhitespace: string
+let strippedStringNoWhitespace: string
 let partialString: string
 let hasFiles: boolean = false
 
 try {
-  htmlFile = readFileSync('./test/data/test.html')
-  htmlString = htmlFile.toString()
-
-  strippedFile = readFileSync('./test/data/stripped.txt')
-  strippedString = strippedFile.toString()
-
-  partialFile = readFileSync('./test/data/test-partial.html')
-  partialString = partialFile.toString()
+  htmlString = readFileSync('./test/data/test.html', 'utf-8')
+  strippedStringWhitespace = readFileSync(
+    './test/data/stripped-whitespace.txt',
+    'utf-8'
+  )
+  strippedStringNoWhitespace = readFileSync(
+    './test/data/stripped-no-whitespace.txt',
+    'utf-8'
+  )
+  partialString = readFileSync('./test/data/test-partial.html', 'utf-8')
 
   hasFiles = true
 } catch {
-  // biome-ignore lint/nursery/noConsole: <explanation>
+  // biome-ignore lint/suspicious/noConsole: Needed for the tests
   console.warn(
     'The test files are not available, running only small sample tests.'
   )
@@ -54,11 +54,18 @@ describe('🧪 Strip <html> tests 🧪', () => {
       assert.equal(stripHtml(htmlString), '')
     })
 
-    test('#6 should return the stripped string ', () => {
-      assert.equal(stripHtmlCode(htmlString), strippedString)
+    test('#6 should return the stripped string (whitespace)', () => {
+      assert.equal(stripHtmlCode(htmlString), strippedStringWhitespace)
     })
 
-    test('#7 should return "Lorem ipsum igorskyflyer"', () => {
+    test('#7 should return the stripped string (no whitespace)', () => {
+      assert.equal(
+        stripHtmlCode(htmlString, { trimWhitespace: true }),
+        strippedStringNoWhitespace
+      )
+    })
+
+    test('#8 should return "Lorem ipsum igorskyflyer"', () => {
       assert.equal(stripHtmlCode(partialString), 'Lorem ipsum igorskyflyer')
     })
   }
