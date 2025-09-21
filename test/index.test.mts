@@ -69,4 +69,73 @@ describe('🧪 Strip <html> tests 🧪', () => {
       assert.equal(stripHtmlCode(partialString), 'Lorem ipsum igorskyflyer')
     })
   }
+
+  test('#9 should return "Hello world"', () => {
+    assert.equal(stripHtml('Hello world'), 'Hello world')
+  })
+
+  test('#10 should leave "<<notatag>>" untouched', () => {
+    assert.equal(stripHtml('<<notatag>>'), '<>')
+  })
+
+  test('#11 should strip comment if supported', () => {
+    assert.equal(stripHtml('<!-- comment -->'), '')
+  })
+
+  test('#12 should strip declaration if supported', () => {
+    assert.equal(stripHtml('<!ENTITY foo>'), '')
+  })
+
+  test('#13 should strip deeply nested tags', () => {
+    assert.equal(stripHtml('<div><span><b>text</b></span></div>'), '')
+  })
+
+  test('#14 should preserve inner text from nested tags', () => {
+    assert.equal(stripHtmlCode('<div><span><b>text</b></span></div>'), 'text')
+  })
+
+  test('#15 should strip broken closing tag', () => {
+    assert.equal(stripHtml('<div><span>text</div>'), '')
+  })
+
+  test('#16 should strip repeated self-closing tags', () => {
+    assert.equal(stripHtml('<br><br><br>'), '')
+  })
+
+  test('#17 should preserve inner text from broken tag', () => {
+    assert.equal(stripHtmlCode('<div>text'), 'text')
+  })
+
+  test('#18 should collapse whitespace', () => {
+    assert.equal(
+      stripHtmlCode('  foo\tbar\nbaz  ', { trimWhitespace: true }),
+      'foo bar baz'
+    )
+  })
+
+  test('#19 should preserve &nbsp; unless decoded', () => {
+    assert.equal(stripHtmlCode('foo&nbsp;bar'), 'foo&nbsp;bar')
+  })
+
+  test('#20 should preserve emoji outside tags', () => {
+    assert.equal(stripHtml('👾<b>alien</b>👾'), '👾👾')
+  })
+
+  test('#21 should preserve emoji and inner text', () => {
+    assert.equal(stripHtmlCode('👾<b>alien</b>👾'), '👾alien👾')
+  })
+
+  test('#22 should preserve CJK characters and inner text', () => {
+    assert.equal(stripHtmlCode('你好 <span>世界</span>'), '你好 世界')
+  })
+
+  test('#23 should handle large plain string', () => {
+    const big = 'x'.repeat(100000)
+    assert.equal(stripHtml(big), big)
+  })
+
+  test('#24 should handle large HTML string', () => {
+    const bigHtml = `${'<div>'.repeat(1000)}text${'</div>'.repeat(1000)}`
+    assert.equal(stripHtml(bigHtml), '')
+  })
 })
