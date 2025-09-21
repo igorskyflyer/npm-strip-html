@@ -4,12 +4,19 @@
 
 <br>
 
-## v2.1.0 (*20-Sep-2025*)
+## v2.1.0 (*21-Sep-2025*)
 
+- **✨ feat**: make `stripHtml()` also strip:
+  - `<! … >` declarations
+  - `<!-- … -->` comments
+  - paired tags with content
+  - lone closing tags (`</div>`)
+  - self-closing tags (`<br>`)
 - **✨ feat**: add `trim-whitespace` option to the HTML stripping functions
 
 <br>
 
+- **✅ fix**: fix the RegExp for HTML stripping
 - **✅ fix**: fix the RegExp for text extraction
 
 <br>
