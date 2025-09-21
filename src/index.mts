@@ -3,7 +3,8 @@
 import type { IOptions } from './IOptions.js'
 
 const rxHtmlCode: RegExp = /<[^>]+>|([^<]+)/gm
-const rxHtml: RegExp = /<[^>]+>|[^<]+/gm
+const rxHtml =
+  /<![^>]+>|<!--[\s\S]*?-->|<([A-Za-z][\w:-]*)(\s[^>]*)?>[\s\S]*?<\/\1>|<\/[A-Za-z][\w:-]*>|<([A-Za-z][\w:-]*)(\s[^>]*)?\/?>/gm
 const rxWhitespace: RegExp = /\s+/gm
 
 /**
